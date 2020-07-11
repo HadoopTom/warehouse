@@ -1,28 +1,29 @@
-#include <iostream>
-#include <deque>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-struct stuff{
-    int amount;
-    int price;
+struct Order {
+    int amount,price;
 };
 
 int main() {
-    string a,b;
-    stuff p;
-    deque<int> lol;
-    cin>>a;
-    int LIFO,FIFO,Med;
-    while (cin>>b) {
-        //FIFO
-       if (b == "E") {
-           continue;
-       }
-       cin>>p.amount>>p.price;
-       if (b == "B") {
-           FIFO+=p.amount*p.price;
-       }
+    int number,bought,sold,sumLIFO,sumFIFO,sumMed,sum,amountsold[sold];
+    deque<int> LIFO,FIFO,p;
+    cin>>number;
+    for (int i = 0; i < number; i++) {
+        cin >> bought >> sold;
+        Order lol[bought];
+        for (int i = 0; i < bought; i++) {
+            cin >> lol[i].amount >> lol[i].price;
+        }
+        for (int i = 0; i < sold; i++) {
+            cin >> amountsold[i];
+        }
+        for (int i = 0; i < bought; i++) {
+            if (amountsold[i] > lol[i].amount) {
+
+            }
+        }
     }
     return 0;
 }
